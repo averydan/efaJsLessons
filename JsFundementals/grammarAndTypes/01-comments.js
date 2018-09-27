@@ -1,11 +1,12 @@
-/*
-Plain text communication
-Help us remember our stuff down the road
-*/
-
-console.log('Hello World');
-// rwnwryhn
-// wryhwryhj
-// wryhjwr5yh
-// wyhw2yh
-// 246h24h
+function validateForm() {
+    if (document.forms["signUp"]["fname"].value == "") {
+        alert("Name must be filled out");
+        return false;
+    } else if(document.forms["signUp"]["password"].value !== document.forms["signUp"]["cPassword"].value)
+    {
+        alert("Passwords do not match");
+    }
+    else {
+        document.getElementById("submit").disabled = true;
+    }
+}
